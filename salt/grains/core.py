@@ -1540,6 +1540,7 @@ _OS_FAMILY_MAP = {
     'AIX': 'AIX',
     'TurnKey': 'Debian',
     'AstraLinuxCE': 'Debian',
+    'Alibaba Cloud (Aliyun)': 'RedHat',
 }
 
 # Matches any possible format:
