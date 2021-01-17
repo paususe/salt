@@ -634,18 +634,11 @@ class CoreGrainsTestCase(TestCase, LoaderModuleMockMixin):
         Test if OS grains are parsed correctly in Alibaba Cloud Linux (Aliyun Linux) 2.1903 LTS
         '''
         _os_release_map = {
-            'os_release_file': {
-                'NAME': 'Alibaba Cloud Linux (Aliyun Linux)'
-                'VERSION': '2.1903 LTS (Hunting Beagle)'
-                'ID': 'alinux'
-                'ID_LIKE': 'rhel fedora centos'
-                'VERSION_ID': '2.1903'
-                'PRETTY_NAME': 'Alibaba Cloud Linux (Aliyun Linux) 2.1903 LTS (Hunting Beagle)'
-                'ANSI_COLOR': '0;31'
-                'HOME_URL': 'https://www.aliyun.com/'
-            },
+            'linux_distribution': ('Alibaba Cloud Linux (Aliyun Linux)', '2.1903', 'Alibaba Cloud Linux (Aliyun Linux) 2.1903 LTS (Hunting Beagle)'),
         }
         expectation = {
+            'os': 'Alibaba Cloud (Aliyun)',
+            'os_family': 'RedHat',
             'oscodename': 'Alibaba Cloud Linux (Aliyun Linux) 2.1903 LTS (Hunting Beagle)',
             'osfullname': 'Alibaba Cloud Linux (Aliyun Linux)',
             'osrelease': '2.1903',
